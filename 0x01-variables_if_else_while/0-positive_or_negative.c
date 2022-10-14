@@ -3,25 +3,33 @@
 #include <time.h>
 
 /**
- * main - print last digit in random number    
- *
- * Description: print last digit in random number    
+ * main - Entry point    
  *
  * Return: Always 0 (Success) 
  */
 
 int main(void)
 {
-	int n, last;
+int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	last = n % 10;
-	if (last > 5)
-		printf("Last digit of %d is %d and is greater than 5\n", n, last);
-	else if (last == 0)
-		printf("Last digit of %d is %d and is 0\n", n, last);
-	else if (last < 6 && last != 0)
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last);
-	return (0);
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+
+if (n == 0)
+{
+printf("%i is zero\n", n);
+}
+
+else if (n < 0)
+{
+printf("%i is negative\n", n);
+}
+
+else
+{
+printf("%i is positive\n", n);
+}
+
+return (0);
+
 }
